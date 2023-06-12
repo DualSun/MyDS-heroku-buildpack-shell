@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+BUILD_DIR=$1
+
+# Exit early if app does not contain a shell script to execute
+if [ ! -f $BUILD_DIR/app.sh ]; then
+  echo "No app.sh detected" && exit 1
+fi
+
+echo "app.sh successfully detected" && exit 0
